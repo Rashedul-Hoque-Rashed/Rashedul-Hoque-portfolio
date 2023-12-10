@@ -14,13 +14,13 @@ const Skills = () => {
 
   return (
     <section className="container mx-auto px-8 py-24">
-      <h2 className="text-3xl font-bold text-center font-oswald">Professional Skills</h2>
-      <h6 className='text-center mb-8 font-semibold'>---My Talent---</h6>
+      <h2 className="text-3xl font-bold text-center font-oswald mb-1">Professional Skills</h2>
+      <h6 className='text-center mb-8 font-semibold font-roboto'>---My Talent---</h6>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {skillsData.map((skill, index) => (
           <div key={index} className="bg-white p-4 rounded-md shadow-md flex flex-col">
-            <h3 className="text-lg font-bold mb-2">{skill.name}</h3>
-            <p className="text-gray-600 mb-2 flex-grow">{skill.description}</p>
+            <h3 className="text-lg font-bold mb-2 font-oswald">{skill.name}</h3>
+            <p className="text-gray-600 mb-2 flex-grow font-roboto">{skill.description}</p>
             <div className="flex items-center">
               <div className="w-2/3 h-2 bg-gray-300 rounded-full">
                 <div
@@ -28,7 +28,7 @@ const Skills = () => {
                   style={{ width: `${skill.percentage}%` }}
                 ></div>
               </div>
-              <span className="ml-2">{`${skill.percentage}%`}</span>
+              <span className="ml-2 font-roboto">{`${skill.percentage}%`}</span>
             </div>
           </div>
         ))}
