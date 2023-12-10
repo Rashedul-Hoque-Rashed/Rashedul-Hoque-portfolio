@@ -1,6 +1,4 @@
-// Skills.js
 
-import React from 'react';
 
 const Skills = () => {
   const skillsData = [
