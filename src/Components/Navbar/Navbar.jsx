@@ -1,8 +1,6 @@
-// Navbar.js
-
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiMenu } from 'react-icons/fi'; // Assuming you want to use the FiMenu icon
+import { FiMenu } from 'react-icons/fi'; 
 import PropTypes from 'prop-types';
 
 const NavItem = ({ to, label, onClick }) => (
