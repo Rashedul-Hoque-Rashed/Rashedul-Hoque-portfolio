@@ -1,7 +1,4 @@
-// Banner.js
 
-// import React from 'react';
-// import myPhoto from './path/to/your/photo.jpg'; // Replace with the actual path to your photo
 
 const Banner = () => {
   const jobTitle = 'Web Developer';
@@ -9,7 +6,6 @@ const Banner = () => {
   return (
     <div className="bg-gradient-to-r from-blue-500 to-teal-500 text-white py-16 md:py-28">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center p-8">
-        {/* Left Side */}
         <div className="md:w-1/2">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 font-oswald">
             Hello! I am Rashedul Hoque
@@ -29,7 +25,6 @@ const Banner = () => {
           </a>
         </div>
 
-        {/* Right Side */}
         <div className="md:w-1/2">
           {/* <img src={myPhoto} alt="Rashedul Hoque" className="w-full h-auto rounded-full" /> */}
         </div>
