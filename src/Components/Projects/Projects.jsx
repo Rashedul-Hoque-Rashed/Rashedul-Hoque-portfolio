@@ -36,14 +36,14 @@ const Projects = () => {
                 {projectsData.map((project) => (
                     <div key={project.id} className="bg-white p-4 rounded-md shadow-md flex flex-col">
                         <img src={project.image} alt={project.title} className="w-full h-52 rounded-md mb-4" />
-                        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                        <p className="text-gray-700 mb-4 flex-grow">{project.description}</p>
+                        <h3 className="text-xl font-semibold mb-2 font-oswald">{project.title}</h3>
+                        <p className="text-gray-700 mb-4 flex-grow font-roboto">{project.description}</p>
                         <div className="flex space-x-4">
                             <a
                                 href={project.liveLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-gradient-to-r from-blue-500 to-teal-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:from-teal-500 hover:to-blue-500"
+                                className="bg-gradient-to-r from-blue-500 to-teal-500 text-white px-4 py-2 rounded-md text-sm font-roboto font-semibold hover:from-teal-500 hover:to-blue-500"
                             >
                                 Live Link
                             </a>
@@ -51,7 +51,7 @@ const Projects = () => {
                                 href={project.githubLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-gray-800"
+                                className="bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-roboto font-semibold hover:bg-gray-800"
                             >
                                 GitHub
                             </a>

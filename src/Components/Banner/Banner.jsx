@@ -35,7 +35,7 @@ const Banner = () => {
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 font-oswald">
             Rashedul Hoque
             <br />
-            <div className='mt-4 font-serif text-2xl'>I am a <span className='ml-2 text-blue-300 dotted' ref={el}></span></div>
+            <div className='mt-4 text-2xl'>I am a <span className='ml-2 text-blue-300 dotted' ref={el}></span></div>
           </h1>
           <p className="text-base md:text-lg lg:text-xl mb-6 font-roboto">
             Welcome to my portfolio! I am passionate about creating interactive and user-friendly web experiences.
@@ -44,7 +44,7 @@ const Banner = () => {
             href="/path/to/your/resume.pdf" // Replace with the actual path to your resume
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-blue-500 px-4 py-2 rounded-md text-sm md:text-base font-semibold hover:bg-blue-100"
+            className="bg-white text-blue-500 px-4 py-2 rounded-md text-sm md:text-base font-semibold font-roboto hover:bg-blue-100"
           >
             Download Resume
           </a>
