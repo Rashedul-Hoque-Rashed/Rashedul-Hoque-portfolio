@@ -24,7 +24,7 @@ const Skills = () => {
             <div className="flex items-center">
               <div className="w-2/3 h-2 bg-gray-300 rounded-full">
                 <div
-                  className="h-full bg-green-500 rounded-full"
+                  className="h-full bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"
                   style={{ width: `${skill.percentage}%` }}
                 ></div>
               </div>

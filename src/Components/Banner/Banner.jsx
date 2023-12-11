@@ -1,16 +1,41 @@
+import { useEffect, useRef } from "react";
+// import Particles from "../Particles/Particles";
+import Typed from "typed.js";
 
 
 const Banner = () => {
-  const jobTitle = 'Web Developer';
+
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+        strings: ["Web Developer", "Programmer", "MERN Developer"],
+        startDelay: 300,
+        typeSpeed: 90,
+        backSpeed: 100,
+        backDelay: 100,
+        smartBackspace: true,
+        loop: true,
+        showCursor: true,
+        cursorChar: "!"
+    });
+
+    return () => {
+        typed.destroy();
+    };
+
+
+}, []);
 
   return (
     <div className="bg-gradient-to-r from-blue-500 to-teal-500 text-white py-16 md:py-28">
+       {/* <Particles/> */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center p-8">
         <div className="md:w-1/2">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 font-oswald">
-            Hello! I am Rashedul Hoque
+            Rashedul Hoque
             <br />
-            <span className="text-3xl md:text-4xl text-blue-300 font-oswald">{jobTitle}</span>
+            <div className='mt-4 font-serif text-2xl'>I am a <span className='ml-2 text-blue-300 dotted' ref={el}></span></div>
           </h1>
           <p className="text-base md:text-lg lg:text-xl mb-6 font-roboto">
             Welcome to my portfolio! I am passionate about creating interactive and user-friendly web experiences.
