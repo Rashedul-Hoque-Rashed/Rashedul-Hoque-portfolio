@@ -9,7 +9,7 @@ const Banner = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-        strings: ["Web Developer", "Programmer", "MERN Developer"],
+        strings: ["front-end development", "Programmer", "MERN Developer"],
         startDelay: 300,
         typeSpeed: 90,
         backSpeed: 100,
@@ -38,7 +38,7 @@ const Banner = () => {
             <div className='mt-4 text-2xl'>I am a <span className='ml-2 text-blue-300 dotted' ref={el}></span></div>
           </h1>
           <p className="text-base md:text-lg lg:text-xl mb-6 font-roboto">
-            Welcome to my portfolio! I am passionate about creating interactive and user-friendly web experiences.
+          From Bangladesh, Comilla. I am rich in front-end development, I am also good at MERN. I love to talk with you about our unique.
           </p>
           <a
             href="/path/to/your/resume.pdf" // Replace with the actual path to your resume
