@@ -1,38 +1,38 @@
+import Marquee from "react-fast-marquee";
 
 
 const Skills = () => {
-  const skillsData = [
-    { name: 'HTML', percentage: 90, description: 'Semantic markup for web content.' },
-    { name: 'CSS', percentage: 90, description: 'Styling and layout for web pages.' },
-    { name: 'Tailwind CSS', percentage: 85, description: 'Utility-first CSS framework.' },
-    { name: 'Material-UI', percentage: 70, description: 'React UI framework with Material Design.' },
-    { name: 'JavaScript', percentage: 80, description: 'Programming language for web development.' },
-    { name: 'React', percentage: 90, description: 'JavaScript library for building user interfaces.' },
-    { name: 'Express.js', percentage: 75, description: 'Web application framework for Node.js.' },
-    { name: 'MongoDB', percentage: 75, description: 'NoSQL database for scalable applications.' },
-  ];
 
   return (
-    <section className="container mx-auto px-8 py-24">
+    <section className="container mx-auto px-8 py-24" id="skills">
       <h2 className="text-3xl font-bold text-center font-oswald mb-1">Professional Skills</h2>
       <h6 className='text-center mb-8 font-semibold font-roboto'>---My Talent---</h6>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {skillsData.map((skill, index) => (
-          <div key={index} className="bg-white p-4 rounded-md shadow-md flex flex-col">
-            <h3 className="text-lg font-bold mb-2 font-oswald">{skill.name}</h3>
-            <p className="text-gray-600 mb-2 flex-grow font-roboto">{skill.description}</p>
-            <div className="flex items-center">
-              <div className="w-2/3 h-2 bg-gray-300 rounded-full">
-                <div
-                  className="h-full bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"
-                  style={{ width: `${skill.percentage}%` }}
-                ></div>
-              </div>
-              <span className="ml-2 font-roboto">{`${skill.percentage}%`}</span>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Marquee speed={120} className="mb-20">
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/HTML.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/CSS.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/TailwindCSS-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/MaterialUI-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/JavaScript.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/React-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/Firebase-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+      </Marquee>
+      <Marquee direction="right" speed={120}>
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/NodeJS-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/ExpressJS-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/MongoDB.svg" alt="" className="w-20 h-20 mr-20" />
+
+        <img src="https://raw.githubusercontent.com/Rashedul-Hoque-Rashed/Rashedul-Hoque-Rashed/97a4296b821c2e138fcd27d92441ffb79d15d903/asset/icons/Vercel-Dark.svg" alt="" className="w-20 h-20 mr-20" />
+
+      </Marquee>
+
     </section>
   );
 };

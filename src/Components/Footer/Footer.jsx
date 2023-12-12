@@ -1,22 +1,8 @@
-import { NavLink } from "react-router-dom";
-import PropTypes from 'prop-types';
 import facebook from '../../assets/icons/facebook.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import twitter from '../../assets/icons/twitter.png'
 import github from '../../assets/icons/github-sign.png'
 
-
-const NavItem = ({ to, label, onClick }) => (
-    <NavLink
-        to={to}
-        onClick={onClick}
-        className={({ isActive }) =>
-            isActive ? 'text-teal-300 font-bold font-roboto' : 'text-white font-semibold font-roboto'
-        }
-    >
-        {label}
-    </NavLink>
-);
 
 
 const Footer = () => {
@@ -27,10 +13,21 @@ const Footer = () => {
                     Rashedul Hoque
                 </h1>
                 <div className="flex space-x-4 justify-center mb-4">
-                    <NavItem to="/" label="Home" />
-                    <NavItem to="/about" label="About" />
-                    <NavItem to="/portfolio" label="Portfolio" />
-                    <NavItem to="/contact" label="Contact" />
+                <a href="#home" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Home
+            </a>
+          <a href="#skills" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Skills
+            </a>
+          <a href="#projects" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Projects
+            </a>
+          <a href="#education" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Education
+            </a>
+          <a href="#contact" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Contact
+            </a>
                 </div>
                 <div className="flex space-x-6 justify-center">
                     <a
@@ -68,12 +65,6 @@ const Footer = () => {
     );
 };
 
-
-NavItem.propTypes = {
-    to: PropTypes.string,
-    label: PropTypes.string,
-    onClick: PropTypes.func,
-};
 
 
 export default Footer;

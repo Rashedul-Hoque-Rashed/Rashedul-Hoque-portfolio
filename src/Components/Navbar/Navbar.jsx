@@ -1,19 +1,6 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi'; 
-import PropTypes from 'prop-types';
 
-const NavItem = ({ to, label, onClick }) => (
-  <NavLink
-    to={to}
-    onClick={onClick}
-    className={({ isActive }) =>
-      isActive ? 'text-teal-300 font-bold font-roboto' : 'text-white font-semibold font-roboto'
-    }
-  >
-    {label}
-  </NavLink>
-);
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,19 +9,28 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
 
   return (
-    <nav className="bg-gray-800 py-4 px-8">
+    <nav className="bg-gray-800 py-4 px-8" id="home">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl font-oswald">Your Name</div>
+        <div className="text-white font-bold text-xl font-oswald cursor-pointer">Rashed</div>
         <div className="hidden md:flex space-x-4">
-          <NavItem to="/" label="Home" onClick={closeMenu} />
-          <NavItem to="/about" label="About" onClick={closeMenu} />
-          <NavItem to="/portfolio" label="Portfolio" onClick={closeMenu} />
-          <NavItem to="/contact" label="Contact" onClick={closeMenu} />
+          <a href="#home" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Home
+            </a>
+          <a href="#skills" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Skills
+            </a>
+          <a href="#projects" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Projects
+            </a>
+          <a href="#education" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Education
+            </a>
+          <a href="#contact" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Contact
+            </a>
+          
         </div>
         <div className="md:hidden">
           <button
@@ -49,10 +45,21 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute right-4 top-14 pb-6 px-10 bg-gray-800 rounded-b-xl">
           <div className="flex flex-col items-center mt-2 space-y-2">
-            <NavItem to="/" label="Home" onClick={closeMenu} />
-            <NavItem to="/about" label="About" onClick={closeMenu} />
-            <NavItem to="/portfolio" label="Portfolio" onClick={closeMenu} />
-            <NavItem to="/contact" label="Contact" onClick={closeMenu} />
+          <a href="#home" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Home
+            </a>
+          <a href="#skills" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Skills
+            </a>
+          <a href="#projects" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Projects
+            </a>
+          <a href="#education" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Education
+            </a>
+          <a href="#contact" className="cursor-pointer text-teal-300 font-bold font-roboto">
+              Contact
+            </a>
           </div>
         </div>
       )}
@@ -60,10 +67,5 @@ const Navbar = () => {
   );
 };
 
-NavItem.propTypes = {
-  to: PropTypes.string,
-  label: PropTypes.string,
-  onClick: PropTypes.func,
-};
 
 export default Navbar;

@@ -1,10 +1,27 @@
+import entertain1 from '../../assets/images/entertain1.png'
+import entertain2 from '../../assets/images/entertain2.png'
+import entertain3 from '../../assets/images/entertain3.png'
+import freeio1 from '../../assets/images/freeio1.png'
+import freeio2 from '../../assets/images/freeio2.png'
+import freeio3 from '../../assets/images/freeio3.png'
+import glamour1 from '../../assets/images/glamour1.png'
+import glamour2 from '../../assets/images/glamour2.png'
+import glamour3 from '../../assets/images/glamour3.png'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import './styles.css';
+import { Autoplay, Pagination } from 'swiper/modules';
+
 
 
 const projectsData = [
     {
         id: 1,
         title: 'Freeio Ltd.',
-        image: 'https://i.ibb.co/CVTnv0s/Screenshot-5.png',
+        image1: freeio1,
+        image2: freeio2,
+        image3: freeio3,
         description: 'It is an online marketplace. If you are a buyer you can post job and search freelancer. Or, if you are a freelancer you will find the best jobs for you.',
         liveLink: 'https://quiet-swan-55d97b.netlify.app',
         githubLink: 'https://github.com/Rashedul-Hoque-Rashed/online-marketplaces-client',
@@ -12,30 +29,47 @@ const projectsData = [
     {
         id: 2,
         title: 'Glamour Brand Shop',
-        image: 'https://i.ibb.co/3cLKwpJ/Screenshot-7.png',
+        image1: glamour1,
+        image2: glamour2,
+        image3: glamour3,
         description: 'This is a beauty brand shop. there are some brands, customers will buy any beauty product from some brands. Sellers can add products, update products, and delete products as him/her need.',
         liveLink: 'https://brand-shop-75512.web.app/',
         githubLink: 'https://github.com/Rashedul-Hoque-Rashed/Brand-Shop-client',
     },
     {
         id: 3,
-        title: 'Survey',
-        image: 'https://i.ibb.co/t4XhV7V/Screenshot-8.png',
-        description: "This is a polling and survey-type website. A surveyor can post any post. Users and pro-users can poll any post and report any post. Pro-users also comment on any post. Admin can manage all surveyor posts and manage user's roles.",
-        liveLink: 'https://polling-and-survey-afe3e.web.app/',
-        githubLink: 'https://github.com/Rashedul-Hoque-Rashed/polling-and-survey-client',
+        title: 'Entertain Event Management',
+        image1: entertain1,
+        image2: entertain2,
+        image3: entertain3,
+        description: "This is an entertainment event management website. Users can book any entertainment show, and join that show. Manegments will add any show details that help users to find their perfect entertainment show.",
+        liveLink: 'https://a9-event-management.web.app/',
+        githubLink: 'https://github.com/Rashedul-Hoque-Rashed/event-management',
     },
 ];
 
 const Projects = () => {
     return (
-        <section className="container mx-auto px-8 pb-24">
+        <section className="container mx-auto px-8 pb-24" id='projects'>
             <h2 className="text-3xl font-bold text-center font-oswald mb-1">Projects</h2>
             <h6 className='text-center mb-8 font-semibold font-roboto'>---My Cases---</h6>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                 {projectsData.map((project) => (
                     <div key={project.id} className="bg-white p-4 rounded-md shadow-md flex flex-col">
-                        <img src={project.image} alt={project.title} className="w-full h-52 rounded-md mb-4" />
+                         <Swiper
+        
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        modules={[Pagination, Autoplay]}
+        className="w-full h-44 rounded-md mb-4 shadow-xl"
+      >
+        <SwiperSlide> <img src={project.image1} alt={'slide1'} className="rounded-md mb-4" /> </SwiperSlide>
+
+        <SwiperSlide> <img src={project.image2} alt={'slide2'} className="rounded-md mb-4" /> </SwiperSlide>
+
+        <SwiperSlide> <img src={project.image3} alt={'slide3'} className=" rounded-md mb-4" /> </SwiperSlide>
+      </Swiper>
+                        {/* <img src={project.image} alt={project.title} className="w-full h-52 rounded-md mb-4" /> */}
                         <h3 className="text-xl font-semibold mb-2 font-oswald">{project.title}</h3>
                         <p className="text-gray-700 mb-4 flex-grow font-roboto">{project.description}</p>
                         <div className="flex space-x-4">

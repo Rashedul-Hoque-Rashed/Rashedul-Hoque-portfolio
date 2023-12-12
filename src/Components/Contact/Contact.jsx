@@ -31,17 +31,17 @@ const Contact = () => {
     try {
       const templateParams = {
         from_email: formData.email,
-        to_email: 'rashedulhoqueceo@gmail.com',  // Replace with your name or email
+        to_email: 'rashedulhoqueceo@gmail.com',  
         subject: formData.subject,
         message_html: formData.message,
 
       };
 
       await emailjs.send(
-        'service_a5mfykl', // Replace with your EmailJS service ID
-        'template_qr481in', // Replace with your EmailJS template ID
+        'service_a5mfykl', 
+        'template_qr481in',
         templateParams,
-        'yILT2cnIxXB6Xxb0G' // Replace with your EmailJS user ID
+        'yILT2cnIxXB6Xxb0G' 
       );
 
       console.log('Email sent successfully');
@@ -65,7 +65,7 @@ const Contact = () => {
 
 
   return (
-    <section className="container mx-auto px-8 pb-24">
+    <section className="container mx-auto px-8 pb-24" id='contact'>
       <h2 className="text-3xl font-bold text-center font-oswald mb-1">Contact Me</h2>
             <h6 className='text-center mb-8 font-semibold font-roboto'>---Let’s Talk---</h6>
       <div className="flex flex-col lg:flex-row items-center justify-center p-8">
