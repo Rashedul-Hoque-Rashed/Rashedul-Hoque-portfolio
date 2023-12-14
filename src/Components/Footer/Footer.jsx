@@ -12,22 +12,22 @@ const Footer = () => {
                 <h1 className="text-2xl text-center font-bold mb-4 font-oswald">
                     Rashedul Hoque
                 </h1>
-                <div className="flex space-x-4 justify-center mb-4">
-                <a href="#home" className="cursor-pointer text-teal-300 font-bold font-roboto">
-              Home
-            </a>
-          <a href="#skills" className="cursor-pointer text-teal-300 font-bold font-roboto">
-              Skills
-            </a>
-          <a href="#projects" className="cursor-pointer text-teal-300 font-bold font-roboto">
-              Projects
-            </a>
-          <a href="#education" className="cursor-pointer text-teal-300 font-bold font-roboto">
-              Education
-            </a>
-          <a href="#contact" className="cursor-pointer text-teal-300 font-bold font-roboto">
-              Contact
-            </a>
+                <div className="flex flex-col md:flex-row gap-4 justify-center mb-4 items-center">
+                    <a href="#home" className="cursor-pointer text-teal-300 font-bold font-roboto">
+                        Home
+                    </a>
+                    <a href="#skills" className="cursor-pointer text-teal-300 font-bold font-roboto">
+                        Skills
+                    </a>
+                    <a href="#projects" className="cursor-pointer text-teal-300 font-bold font-roboto">
+                        Projects
+                    </a>
+                    <a href="#education" className="cursor-pointer text-teal-300 font-bold font-roboto">
+                        Education
+                    </a>
+                    <a href="#contact" className="cursor-pointer text-teal-300 font-bold font-roboto">
+                        Contact
+                    </a>
                 </div>
                 <div className="flex space-x-6 justify-center">
                     <a
