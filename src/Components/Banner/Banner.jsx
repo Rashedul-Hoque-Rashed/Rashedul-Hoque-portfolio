@@ -40,7 +40,7 @@ const Banner = () => {
             From Bangladesh, Comilla. I am rich in front-end development, I am also good at MERN. I love to talk with you about our unique.
           </p>
           <a
-            href="https://drive.google.com/u/0/uc?id=10mnMHxYmq8a9QZxaHdT2FixJrIGRbtWB&export=download" // Replace with the actual path to your resume
+            href="https://drive.google.com/u/0/uc?id=13WlwYaRcgW8CTkBq6mJCMfDgMxo6hH8k&export=download" // Replace with the actual path to your resume
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-blue-500 px-4 py-2 rounded-md text-sm md:text-base font-semibold font-roboto hover:bg-blue-100 flex items-center gap-4 w-fit"
